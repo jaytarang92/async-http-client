@@ -1,0 +1,7 @@
+- name: Publish package
+  if: github.event_name == 'push'
+  uses: pypa/gh-action-pypi-publish@master
+  with:
+    user: __token__
+    password: ${{ secrets.pypi_password }}
+    repository_url: 
